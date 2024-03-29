@@ -1,35 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="icon" href="assets/backpackicon.png" />
+        <link rel="icon" href="assets/logo.png" />
 		<title>devz stationery : Home</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <body>
-            <div class="container">
-                <!-- navbar -->
-                <nav>
-                    <ul>
-                        <li class="logo">
-                            <div class="logo">
-                                <img src="assets/logo.png" width="40" height="50"/>
-                            <a href="index.html" class="page-scroll">
-                                <h2>devz stationery</h2>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="menu">
-                        <li><a class="page-scroll" href="index.html">Home</a></li>
-                        <li><a class="page-scroll" href="categories.html">Categories</a></li>
-                        <li><a class="page-scroll" href="about.html">About Us</a></li>
-                        <li><a class="page-scroll" href="team.html">Team</a></li>
-                        <li><a class="page-scroll" href="contact.html">Contact Us</a></li>
-                        
-                        <li><a class="page-scroll" href="login.html">Login</a></li>
-                    </ul>
-                </nav>
-            <img src="assets/homepage.png" alt="homeimage" width="500" height="200"/>
-            </div>
-            <p>Devz Stationery is a store specializing in stationery and office supplies is 
-                an online platform that offers a wide range of writing implements.</p>
+            <!-- navbar -->
+			<div class="header">  
+				<div class="header_logo">
+				<!-- <img src="assets/logo.png" alt="logo" width="20px" height="30"> -->
+				  <strong>DEVZ</strong>
+				</div>
+				<nav class="navbar">
+				  <ul class="navbar_menu">
+					<li class="navbar_item">
+					  <a href="#" class="navbar_link"><i data-feather="home"></i><span>Home</span> </a>
+					</li>
+					<li class="navbar_item">
+					  <a href="#" class="navbar_link"><i data-feather="message-square"></i><span>Categories</span></a>        
+					</li>
+					<li class="navbar_item">
+					  <a href="#" class="navbar_link"><i data-feather="users"></i><span>About Us</span></a>        
+					</li>
+					<li class="navbar_item">
+					  <a href="#" class="navbar_link"><i data-feather="folder"></i><span>Contact</span></a>        
+					</li>
+					<li class="navbar_item">
+					  <a href="#" class="navbar_link"><i data-feather="archive"></i><span>Login</span></a>        
+					</li>
+				  </ul>
+				</nav>
+			  </div>
+        <!-- header -->
+		<header class="home">
+			<div class="homepage">
+				<img src="assets/homepage.png">
+			</div>
+				<div class="judul">
+					<div>
+						<p><b>The Best Products For Your Stationery</b></p>
+					</div>
+				</div>
+				<div class="fitur">
+					<div class="kotak">
+						<img src="assets/backpack.png" alt="">
+						<p>Backpacks</p>
+					</div>
+					<div class="kotak">
+						<img src="assets/drawing-tools.png" alt="">
+						<p>Drawing <br> Tools</p>
+					</div>
+					<div class="kotak">
+						<img src="assets/pencil.png" alt="">
+						<p>Writing <br> Tools</p>
+					</div>
+					<div class="kotak">
+						<img src="assets/notebook.png" alt="">
+						<p>Notebooks</p>
+					</div>
+				</div>
+		</header>
+            <!--<img src="assets/homepage.png" alt="homeimage" width="500" height="200"/>-->
+            		<!-- about -->
+		<section class="about" id="about">
+			<div class="deskripsi">
+				<h2>Who Are We</h2>
+				<p>Welcome to Devz Stationery, your one-stop online destination for all things stationery and office supplies! At Devz Stationery, 
+                    we take pride in offering a wide range of high-quality products that cater to your writing, drawing, and organizational needs.</p>
+				<p>AOur store features a diverse selection of stationery items, including pens, pencils, notebooks, journals, planners, art supplies, 
+                    desk accessories, and much more. Whether you're a student, professional, artist, or anyone who loves stationery, we have something for everyone.</p>
+				<button>START EXPLORING</button>
+			</div>
+			</div>
+		</section>
                 <div class="products-categories">
 					<div class="products">
 						<img src="assets/p1.png" width="100" height="100" />
@@ -40,7 +83,7 @@
                     <div class="products">
                         <img src="assets/p3.png" width="100" height="100" />
                     </div>
-					</div>    
+				</div>    
         </body>
     </head>
 </html>
