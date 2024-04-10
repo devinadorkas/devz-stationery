@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	background-color: antiquewhite;
 }
 
 /* Navbar Styles */
@@ -116,6 +117,39 @@ body {
 	color: #fff;
 	margin-top: 0.5rem;
 }
+
+
+h2 {
+	text-align: center;
+	color: #7a28d7;
+}
+
+button {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+p {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.carousel-container {
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel-slide {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+	margin-right: 10px; /* Adjust the margin as needed */
+}
+
 
 /* Media Query for Smartphone */
 @media screen and (max-width: px) {

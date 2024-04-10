@@ -4,6 +4,7 @@
         <link rel="icon" href="assets/logo.png" />
 		<title>devz stationery : Home</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+		</head>
         <body>
             <!-- navbar -->
 			<div class="header">  
@@ -26,7 +27,7 @@
 					  <a href="#" class="navbar_link"><i data-feather="folder"></i><span>Contact</span></a>        
 					</li>
 					<li class="navbar_item">
-					  <a href="#" class="navbar_link"><i data-feather="archive"></i><span>Login</span></a>        
+					  <a href="login.html" class="navbar_link"><i data-feather="archive"></i><span>Login</span></a>        
 					</li>
 				  </ul>
 				</nav>
@@ -67,23 +68,79 @@
 				<h2>Who Are We</h2>
 				<p>Welcome to Devz Stationery, your one-stop online destination for all things stationery and office supplies! At Devz Stationery, 
                     we take pride in offering a wide range of high-quality products that cater to your writing, drawing, and organizational needs.</p>
-				<p>AOur store features a diverse selection of stationery items, including pens, pencils, notebooks, journals, planners, art supplies, 
+				<p>Our store features a diverse selection of stationery items, including pens, pencils, notebooks, journals, planners, art supplies, 
                     desk accessories, and much more. Whether you're a student, professional, artist, or anyone who loves stationery, we have something for everyone.</p>
-				<button>START EXPLORING</button>
+					<button class="button-start" id="startExploringBtn">START EXPLORING</button>
+				</div>
 			</div>
 			</div>
 		</section>
-                <div class="products-categories">
-					<div class="products">
-						<img src="assets/p1.png" width="100" height="100" />
-                    </div>
-                    <div class="products">
-                        <img src="assets/p2.png" width="100" height="100" />
-                    </div>
-                    <div class="products">
-                        <img src="assets/p3.png" width="100" height="100" />
-                    </div>
-				</div>    
+		<div class="carousel-container">
+			<div class="carousel-slide">
+				<img src="assets/p1.png" width="200" height="200" />
+				<img src="assets/p2.png" width="200" height="200" />
+				<img src="assets/p3.png" width="200" height="200" />
+				<img src="assets/p4.jpg" width="200" height="200" />
+				<img src="assets/p5.jpg" width="200" height="200" />
+				<img src="assets/p6.jpg" width="200" height="200" />
+				<img src="assets/p7.jpg" width="200" height="200" />
+				<img src="assets/p8.jpg" width="200" height="200" />
+				<img src="assets/p9.jpg" width="200" height="200" />
+				<img src="assets/p10.jpg" width="200" height="200" />
+				<img src="assets/p11.jpg" width="200" height="200" />
+				<img src="assets/p1.png" width="200" height="200" />
+				<img src="assets/p2.png" width="200" height="200" />
+				<img src="assets/p3.png" width="200" height="200" />
+				<img src="assets/p4.jpg" width="200" height="200" />
+				<img src="assets/p5.jpg" width="200" height="200" />
+				<img src="assets/p6.jpg" width="200" height="200" />
+				<img src="assets/p7.jpg" width="200" height="200" />
+				<img src="assets/p8.jpg" width="200" height="200" />
+				<img src="assets/p9.jpg" width="200" height="200" />
+				<img src="assets/p10.jpg" width="200" height="200" />
+				<img src="assets/p11.jpg" width="200" height="200" />
+			</div>
+		</div>
+		<script>
+			const carouselSlide = document.querySelector('.carousel-slide');
+			const images = document.querySelectorAll('.carousel-slide img');
+		
+			let counter = 0;
+			const slideWidth = images[0].clientWidth;
+			const intervalTime = 2000;
+		
+			function nextSlide() {
+				if (counter >= images.length / 2 - 1) {
+					counter = 0; 
+				} else {
+					counter++;
+				}
+				carouselSlide.style.transform = `translateX(-${slideWidth * counter}px)`;
+			}
+		
+			function prevSlide() {
+				if (counter <= 0) {
+					counter = images.length / 2 - 1; 
+				} else {
+					counter--;
+				}
+				carouselSlide.style.transform = `translateX(-${slideWidth * counter}px)`;
+			}
+		
+			function startCarousel() {
+				setInterval(() => {
+					nextSlide();
+				}, intervalTime);
+			}
+		
+			startCarousel();
+
+			// DOM 
+			const startExploringBtn = document.getElementById('startExploringBtn');
+        startExploringBtn.addEventListener('click', () => {
+            
+            alert('Button clicked! Have Fun Exploring!');
+        });
+		</script>
         </body>
-    </head>
 </html>
