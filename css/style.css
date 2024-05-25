@@ -1,4 +1,12 @@
 /* Global Styles */
+@font-face {
+    font-family: 'hey_comicregular';
+    src: url('path/to/fonts/hey_comic/hey_comic-webfont.woff2') format('woff2'),
+         url('path/to/fonts/hey_comic/hey_comic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background: url('assets/background.jpg') no-repeat center center fixed;
 	background-size: cover;
@@ -51,7 +59,7 @@ body {
 /* Header Styles */
 .home {
 	height: 120vh;
-	background: rgba(131, 154, 225, 0.8);
+	background: #839ae1cc;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -79,7 +87,7 @@ body {
 }
 
 .deskripsi button {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'hey_comicregular', Arial, sans-serif;
 	border: none;
 	padding: 0.75rem 2rem;
 	background: #5846f9;
@@ -94,6 +102,89 @@ body {
 .deskripsi button:hover {
 	background-color: #454D7A;
 }
+
+/* style card-categories */
+.cards-categories {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .cards-categories h2 {
+	font-family: 'hey_comicregular', Arial, sans-serif;
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  .card-categories {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  
+  .card {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+	transform: scale(1.05);
+  }
+  
+  .card .card-image {
+	overflow: hidden;
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .card img {
+	width: 240px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 15px 15px 0 0;
+  }
+  
+  .card-content {
+	padding: 20px;
+  }
+  
+  .card h5 {
+	margin-bottom: 10px;
+	font-family: 'hey_comicregular', Arial, sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	color: #333;
+  }
+  
+  .card p.description {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 15px;
+  }
+  
+  .card p.price {
+	font-size: 18px;
+	font-weight: bold;
+	color: #7a28d7;
+	margin-bottom: 15px;
+  }
+  
+  .card .btn_belanja {
+	background-color: #7a28d7;
+	padding: 12px 20px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .card .btn_belanja:hover {
+	background-color: #7a28d7;
+  }
 
 /* Fitur Styles */
 .fitur {
@@ -117,7 +208,6 @@ body {
 	color: #fff;
 	margin-top: 0.5rem;
 }
-
 
 h2 {
 	text-align: center;
@@ -150,6 +240,67 @@ p {
 	margin-right: 10px; /* Adjust the margin as needed */
 }
 
+/* Style untuk input text */
+input[type="text"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 250px;
+	margin-right: 10px;
+	font-size: 14px;
+  }
+  
+  /* Style untuk tombol subscribe */
+  .button-subscribe {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+  }
+  
+  /* Hover effect untuk tombol subscribe */
+  input[type="submit"] {
+	background-color: #7a28d7;
+	font-family: 'hey_comicregular', Arial, sans-serif;
+	border: none;
+	padding: 0.75rem 2rem;
+	color: #fff;
+	font-size: 1rem;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+
+/* Tampilan pop-up */
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #4e3569;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+	z-index: 1000;
+}
+
+.popup input[type="text"] {
+	width: 200px;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.popup input[type="submit"] {
+	padding: 5px 10px;
+	background-color: #007bff;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
 
 /* Media Query for Smartphone */
 @media screen and (max-width: px) {

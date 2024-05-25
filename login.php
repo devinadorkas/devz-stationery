@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Validasi username dan password
-    if ($username === 'admin' && $password === 'password123') {
+    if ($username === 'devinadorkas' && $password === 'ellakeren') {
         // Variabel session
         $_SESSION['username'] = $username;
 
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Ke halaman lain
-        header('Location: index.php');
+        header('Location: admin.php');
         exit();
     } else {
         // Invalid atau error
